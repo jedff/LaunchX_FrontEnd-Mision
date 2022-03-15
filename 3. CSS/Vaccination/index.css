@@ -36,47 +36,48 @@
 }
 
 h1 {
-  line-height: 4rem;
+  line-height: 6rem;
   font-family: var(--ff-pri);
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 5rem;
+  max-width: 35rem;
   margin: 0;
   color: var(--clr-pri);
 }
 h2 {
   font-family: var(--ff-pri);
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 3rem;
   margin: 0;
   color: var(--clr-pri);
 }
 h3 {
   font-family: var(--ff-sec);
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 2rem;
   margin: 0;
   color: var(--clr-pri);
 }
 p {
-  max-width: 60ch;
+  max-width: 44ch;
   font-family: var(--ff-sec);
   margin: 0;
   color: var(--clr-sec);
-  line-height: 1.8rem;
-  font-size: 1.35rem;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 p select,
 p input {
   font-family: var(--ff-pri);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
   color: var(--clr-pri);
   border: none;
 }
 p label {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 body {
   background-color: #ffffff;
@@ -132,16 +133,13 @@ header {
   padding: 2rem 0;
   font-family: var(--ff-sec);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   border: 3px solid #fff;
   background-color: rgb(255, 255, 255, .93);
   backdrop-filter: blur(4px);
   z-index: 1111;
 }
-header img{
-  display: block;
-  width: 200px;
-}
+
 nav {
   display: flex;
   align-items: center;
@@ -151,7 +149,7 @@ nav {
   position: relative;
   font-family: var(--ff-pri);
   color: #2949c7;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 900;
   z-index: 1;
 }
@@ -174,14 +172,14 @@ nav {
   display: inline-block;
   text-decoration: none;
   padding: 1.2rem;
-  width: 10rem;
+  width: 12rem;
   height: 3.5rem;
   border-radius: 4px;
   border: none;
   background: var(--bg-btn-light);
   font-family: var(--ff-sec);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   cursor: pointer;
   color: var(--bg-btn);
   text-align: center;
@@ -204,24 +202,22 @@ nav {
 /*  ----------------------------------------------------  */
 .wrapper {
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
 }
-.wrapper > * {
-  flex: 0 1 100%;
-}
+
 section {
   position: relative;
-  max-width: 1600px;
-  height: 900px;
+  max-width: 1900px;
+  min-height: 900px;
   margin: auto;
 }
 
 /* -------------------------------------------- FIGHT SECTION */
 
 .fight_container {
+  width: 100%;
   position: relative;
   display: flex;
-  height: inherit;
 }
 .fight_container_img {
   position: relative;
@@ -229,6 +225,8 @@ section {
   background: var(--bglg-img);
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  padding-top: 8rem;
 }
 .fight_container_text{
   flex: 0 1 52%;
@@ -237,14 +235,17 @@ section {
   padding: 14rem 10rem 8rem 8rem;
   gap: 2rem;
 }
+.fight_container_text p{
+ max-width: 34ch;
+}
 .form_container {
-  margin-top: 8rem;
+  padding-top: 8rem;
 }
 .fight_container_img img {
   display: block;
   max-width: 100%;
   object-fit: contain;
-  margin-top: 8rem;
+  padding-top: 10rem;
 }
 .features {
   margin-top: 1rem;
@@ -252,7 +253,7 @@ section {
   gap: 2rem;
 }
 .feature{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .schedule_form {
   position: absolute;
@@ -265,9 +266,9 @@ section {
     "loci dati vaci but"; 
   top: 82%;
   left: 8.5%;
-  width: 70%;
+  width: 65rem;
   max-width: fit-content;
-  padding: 2rem;
+  padding: 3rem;
   background-color: rgba(255, 255, 255, .90);
   box-shadow: var(--bs);
   border: 1px solid #fff;
@@ -344,12 +345,20 @@ option {
 .why_container_img{
   flex: 0 1 48%;
 }
+.why_container_img img{
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
 .why_container_text {
   flex: 0 1 52%;
   display: flex;
   flex-flow: column;
   gap: 2rem;
-  padding: 5rem 0 4rem 8rem;
+  padding: 7rem 0 4rem 8rem;
+}
+.why_container_text p {
+  max-width: 45ch;
 }
 .benefits {
   display: flex;
@@ -358,17 +367,17 @@ option {
   gap: 1.5rem;
 }
 .benefit_item {
-  flex: 0 1 23%;
+  flex: 0 1 20%;
   display: flex;
   flex-flow: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   border: 3px solid #fafaff;
   border-radius: 10px;
 }
 .benefit_item p {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
 }
 .benefit_item:hover {
@@ -395,7 +404,6 @@ option {
 .prep_section {
   position: relative;
   display: flex;
-  height: inherit;
   padding-bottom: 5rem;
 }
 
@@ -403,14 +411,14 @@ option {
   display: flex;
   flex: 0 1 52%;
   flex-flow: column;
-  padding: 6rem 8rem 2rem 0;
+  padding: 8rem 8rem 2rem 0;
   gap: 2rem;
 }
 .prep_list{
   display: flex;
   flex-flow: column;
   gap: 1.5rem;
-  margin-top: 3.5rem;
+  padding-top: 8rem;
   max-width: 30rem;
 }
 .prep_item {
@@ -463,7 +471,6 @@ option {
 .emer_section {
   position: relative;
   display: flex;
-  height: inherit;
   padding-bottom: 10rem;
 }
 
@@ -471,7 +478,7 @@ option {
   flex: 0 1 52%;
   display: flex;
   flex-flow: column;
-  padding: 6rem 0 0 8rem;
+  padding: 8rem 0 0 8rem;
   gap: 2rem;
 }
 .emer_section_img {
@@ -487,10 +494,11 @@ option {
   display: flex;
   flex-flow: wrap;
   gap: 1.5rem;
-  margin-top: 5rem;
+  padding-top: 10rem;
+  justify-content: space-evenly;
 }
 .emer_item {
-  flex: 0 1 45%;
+  flex: 0 1 40%;
   display: flex;
   flex-flow: column;
   gap: 2rem;
@@ -521,7 +529,7 @@ option {
   box-shadow: var(--bs);
 }
 .btn_emer {
-  width: 12rem;
+  width: 14rem;
 }
 
 
@@ -538,22 +546,25 @@ option {
   padding: 3rem 8rem 1rem 8rem;
   overflow: hidden;
 }
-.footer_text,
-.footer_links{
-  flex: 0 1 50%;
+.footer_text {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  flex: 0 1 52%;
 }
 .footer_text p {
-  padding: 1rem 20rem 0 0;
+  max-width: 18ch;
   font-size: 1.2rem;
 }
-.footer_links {
+.footer_links { 
+  flex: 0 1 48%;
   display: flex;
   flex-flow: wrap;
-  justify-content: right;
+  justify-content: flex-end;
+  gap: 4rem;
 }
 .links_list {
-  padding-left:2rem ;
-  flex: 0 1 33%;
+  flex: 0 1 25%;
   display: flex;
   flex-flow: column;
   gap: 2rem;
@@ -669,7 +680,7 @@ option {
   background-color: #f4f6fb;
   width: 13rem;
   height: 13rem;
-  top: 26.5rem;
+  top: 33rem;
   left: -6.4rem;
   z-index: -1;
 }
@@ -706,36 +717,119 @@ option {
 
 /* --------------------------------------------------------*/
 
-@media (max-width: 1300px) {
-  header {
-    position: relative;
+@media (max-width: 1680px) {
+  h1 {
+    font-size: clamp(3rem, 4.2vw, 5rem);
+    line-height: 1.2;
   }
-  .fight_container_text {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+  .feature {
+    font-size: 1.2rem;
+  }
+  .triangle2{
+    top: 27rem;
+  }
+  .fight_container_img {
     padding-top: 6rem;
-    flex: 0 1 55%;
+  }
+   .schedule_form {
+    top: 80%;
+  }
+  .schedule_form * {
+    font-size: 1.4rem;
+  }
+  .why_container_text {
+    padding-top: 5rem;
+  }
+  .benefits {
+    padding-top: 3rem;
+    gap: 1rem;
+  }
+  .benefit_item p{
+    font-size: 1rem;
+  }
+  .benefit_item {
+    flex: 0 1 23%;
+    padding: 1.5rem;
+  }
+  .prep_section_text {
+    padding-top: 6rem;
+  }
+  .prep_list {
+    padding-top: 3.5rem;
+  }
+  .emer_section_text {
+    padding-top: 6rem;
+  }
+  .emer_list {
+    gap: 1rem;
+    padding-top: 10rem;
+  }
+  .emer_item_text p {
+    font-size: .9rem;
+  }
+  .btn_emer {
+    width: 12rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1280px) {
+  h1{
+    font-size: clamp(2rem, 5vw, 8rem);
+  }
+  h2{
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .fight_container_text{
+    flex: 0 1 60%;
   }
   .prep_section_text,
   .emer_section_text {
     flex: 0 1 55%;
-    padding-top: 4rem;
+    padding-top: 5rem;
     gap: 1rem;
   }
-  .fight_container_img,
   .emer_section_img,
   .prep_section_img {
     flex: 0 1 45%;
   }
   .emer_list{
     gap: 1rem;
-    margin-top: 4rem;
+    padding-top: 4rem;
+  }
+  .form_container {
+    padding-top: 0;
+  }
+  .schedule {
+    font-size: 1.2rem;
   }
   .schedule_form {
-    top: 70%;
+    padding: 1rem;
+    grid-template-rows: 1rem 1rem;
+    width: 50rem;
+  }
+  .schedule_form * {
+    font-size: 1.1rem;
+    max-width: 9rem;
   }
 }
 
 
-@media (max-width: 1152px) {
+@media (max-width: 900px) {
   header {
     position: relative;
   }
@@ -791,7 +885,7 @@ option {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #xmark {
     display: none;
   }
